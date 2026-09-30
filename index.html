@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Учебный книжный магазин: каталог, поиск и корзина.">
+  <title>Лист — книжный магазин</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Лист — на главную"><span class="brand-mark">л</span><span>лист<span class="brand-dot">.</span></span></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a class="active" href="#catalog">Каталог</a>
+      <a href="#about">О магазине</a>
+    </nav>
+    <a class="cart-link" href="#cart" aria-label="Перейти к корзине">Корзина <span id="header-cart-count" class="count-pill">0</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-line"></span>Книжный магазин</span>
+        <h1 id="hero-title">Истории,<br>которые <em>остаются.</em></h1>
+        <p>Книги для тихих вечеров, больших открытий и новых любимых авторов.</p>
+        <a class="hero-button" href="#catalog">Выбрать книгу <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="hero-book hero-book-back"></div>
+        <div class="hero-book hero-book-front"><span>ЧИТАЙ<br>МЕДЛЕННО</span><small>ЛИСТ · 2025</small></div>
+        <span class="hero-star star-one">✳</span><span class="hero-star star-two">✳</span>
+        <span class="hero-note">найдите<br>свою историю</span>
+      </div>
+      <div class="hero-index">01 <span>—</span> 03</div>
+    </section>
+
+    <section id="catalog" class="catalog-section" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">Хорошие книги — рядом</span><h2 id="catalog-title">Каталог <span id="catalog-total" class="muted-number">15</span></h2></div>
+        <p class="section-intro">Листайте, выбирайте и сохраняйте то,<br>к чему захочется вернуться.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Поиск по названию или автору</span><input id="search-input" type="search" placeholder="Название или автор" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <label class="select-wrap"><span class="visually-hidden">Фильтр по жанру</span><select id="genre-filter"><option value="all">Все жанры</option></select><span class="select-arrow" aria-hidden="true">⌄</span></label>
+        <label class="select-wrap sort-wrap"><span class="visually-hidden">Сортировка по цене</span><select id="sort-select"><option value="default">Сначала популярное</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select><span class="select-arrow" aria-hidden="true">⌄</span></label>
+      </div>
+      <div class="catalog-layout">
+        <div id="book-grid" class="book-grid" aria-live="polite"></div>
+        <aside id="cart" class="cart-panel" aria-labelledby="cart-title">
+          <div class="cart-heading"><div><span class="eyebrow">Ваш выбор</span><h3 id="cart-title">Корзина <span id="cart-count" class="cart-count">0</span></h3></div><span class="cart-bag" aria-hidden="true">♧</span></div>
+          <div id="cart-items" class="cart-items"></div>
+          <div id="cart-empty" class="cart-empty"><span class="empty-icon" aria-hidden="true">✳</span><p>Пока здесь пусто.<br>Самое время найти книгу.</p></div>
+          <div class="cart-footer"><div class="cart-total"><span>Итого</span><strong id="cart-total">0 ₽</strong></div><button class="checkout-button" type="button" disabled>Перейти к оформлению <span aria-hidden="true">→</span></button><p class="demo-note">Учебный проект · оплата не подключена</p></div>
+        </aside>
+      </div>
+    </section>
+    <section id="about" class="about-strip"><span>Читать — значит быть где-то ещё.</span><span>Хороших историй вам <b>♡</b></span></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">л</span><span>лист<span class="brand-dot">.</span></span></a><span>Небольшой учебный книжный магазин</span><span>© 2025 Лист</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
