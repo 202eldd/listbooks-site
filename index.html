@@ -95,6 +95,23 @@
         <article class="support-item"><span>02</span><div><h3>Сохраняется ли корзина?</h3><p>Да. Она хранится в браузере на этом устройстве и останется после обновления страницы.</p></div></article>
         <article class="support-item"><span>03</span><div><h3>Можно оформить заказ?</h3><p>Это учебный проект: оформление и оплата не подключены, реальные заказы не создаются.</p></div></article>
       </div>
+      <div class="assistant-card" aria-labelledby="assistant-title">
+        <div class="assistant-heading"><div><span class="eyebrow">Помощник магазина</span><h3 id="assistant-title">Частые вопросы</h3></div><span class="assistant-status"><i></i> Бесплатные ответы</span></div>
+        <p class="assistant-caption">Нажмите на вопрос — ответ сразу появится здесь.</p>
+        <div id="assistant-messages" class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
+          <div class="assistant-message assistant-message-bot">Здравствуйте! Выберите вопрос, чтобы получить готовый ответ.</div>
+        </div>
+        <div class="assistant-prompts" aria-label="Частые вопросы">
+          <button type="button" data-faq-question="Как найти книгу?" data-faq-answer="Введите название или автора в строку поиска каталога. Можно также выбрать жанр и отсортировать книги по цене.">Как найти книгу?</button>
+          <button type="button" data-faq-question="Как добавить книгу в корзину?" data-faq-answer="Нажмите «Добавить в корзину» под нужной книгой. Количество и общая сумма отобразятся в корзине.">Как добавить книгу в корзину?</button>
+          <button type="button" data-faq-question="Как изменить количество книг?" data-faq-answer="Откройте корзину и нажмите «+» или «−» рядом с книгой. Уменьшение количества до нуля удалит её из корзины.">Как изменить количество?</button>
+          <button type="button" data-faq-question="Сохранится ли корзина после обновления страницы?" data-faq-answer="Да. Корзина сохраняется в браузере на этом устройстве и останется после обновления страницы. На другом устройстве она не появится.">Сохранится ли корзина?</button>
+          <button type="button" data-faq-question="Как оплатить заказ?" data-faq-answer="Это учебный проект: оформление настоящих заказов и оплата не подключены. Платёжные данные вводить не нужно.">Как оплатить заказ?</button>
+          <button type="button" data-faq-question="Есть ли доставка?" data-faq-answer="Нет, магазин создан для учебного проекта. Доставка и реальные заказы не оформляются.">Есть ли доставка?</button>
+          <button type="button" data-faq-question="В какой валюте указаны цены?" data-faq-answer="Все цены в каталоге указаны в казахстанских тенге (₸).">В какой валюте цены?</button>
+        </div>
+        <p class="assistant-privacy">Готовые ответы работают прямо в браузере. Сообщения не отправляются на сервер и не используют платный ИИ.</p>
+      </div>
       <a class="support-link" href="#catalog">Вернуться к каталогу <span aria-hidden="true">↗</span></a>
     </section>
 
@@ -102,5 +119,6 @@
   </main>
   <footer class="footer"><a class="brand" href="#top"><span class="brand-mark">л</span><span>лист<span class="brand-dot">.</span></span></a><span>Небольшой учебный книжный магазин</span><span>© 2025 Лист</span></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="support-chat.js?v=1" defer></script>
 </body>
 </html>
