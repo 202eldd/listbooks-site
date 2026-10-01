@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f7f5f0">
   <meta name="description" content="Учебный книжный магазин: каталог, поиск и корзина.">
   <title>Лист — книжный магазин</title>
-  <link rel="stylesheet" href="style.css?v=20261001-faq">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261001-responsive">
+  <script src="script.js?v=20261001-responsive" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -57,7 +57,7 @@
         <p class="section-intro">Листайте, выбирайте и сохраняйте то,<br>к чему захочется вернуться.</p>
       </div>
       <div class="toolbar">
-        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Поиск по названию или автору</span><input id="search-input" type="search" placeholder="Название или автор" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Поиск по названию или автору</span><input id="search-input" type="search" placeholder="Название или автор" autocomplete="off"></label>
         <label class="select-wrap"><span class="visually-hidden">Фильтр по жанру</span><select id="genre-filter"><option value="all">Все жанры</option></select><span class="select-arrow" aria-hidden="true">⌄</span></label>
         <label class="select-wrap sort-wrap"><span class="visually-hidden">Сортировка по цене</span><select id="sort-select"><option value="default">Сначала популярное</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select><span class="select-arrow" aria-hidden="true">⌄</span></label>
       </div>
@@ -82,7 +82,6 @@
         <article class="review-card"><span class="review-stars" aria-label="5 из 5">★★★★★</span><blockquote>«Понравилось, что можно спокойно полистать подборку и сохранить выбор в корзине».</blockquote><p><b>Данияр</b><span>любит фантастику</span></p></article>
         <article class="review-card"><span class="review-stars" aria-label="5 из 5">★★★★★</span><blockquote>«Нашла историю на выходные. Теперь хочется вернуться за следующей книгой».</blockquote><p><b>Мадина</b><span>читательница нон-фикшн</span></p></article>
       </div>
-      <p class="review-disclaimer">Отзывы демонстрационные, добавлены для примера оформления.</p>
     </section>
 
     <section id="support" class="support-section" aria-labelledby="support-title">
@@ -96,7 +95,7 @@
         <article class="support-item"><span>03</span><div><h3>Можно оформить заказ?</h3><p>Это учебный проект: оформление и оплата не подключены, реальные заказы не создаются.</p></div></article>
       </div>
       <div class="assistant-card" aria-labelledby="assistant-title">
-        <div class="assistant-heading"><div><span class="eyebrow">Помощник магазина</span><h3 id="assistant-title">Частые вопросы</h3></div><span class="assistant-status"><i></i> Бесплатные ответы</span></div>
+        <div class="assistant-heading"><div><span class="eyebrow">Помощник магазина</span><h3 id="assistant-title">Частые вопросы</h3></div></div>
         <p class="assistant-caption">Нажмите на вопрос — ответ сразу появится здесь.</p>
         <div id="assistant-messages" class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions text">
           <div class="assistant-message assistant-message-bot">Здравствуйте! Выберите вопрос, чтобы получить готовый ответ.</div>
@@ -110,7 +109,7 @@
           <button type="button" data-faq-question="Есть ли доставка?" data-faq-answer="Нет, магазин создан для учебного проекта. Доставка и реальные заказы не оформляются.">Есть ли доставка?</button>
           <button type="button" data-faq-question="В какой валюте указаны цены?" data-faq-answer="Все цены в каталоге указаны в казахстанских тенге (₸).">В какой валюте цены?</button>
         </div>
-        <p class="assistant-privacy">Готовые ответы работают прямо в браузере. Сообщения не отправляются на сервер и не используют платный ИИ.</p>
+        <p class="assistant-privacy">Ответы подготовлены заранее и появляются сразу.</p>
       </div>
       <a class="support-link" href="#catalog">Вернуться к каталогу <span aria-hidden="true">↗</span></a>
     </section>
