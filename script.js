@@ -62,7 +62,7 @@ function renderBooks(){
   grid.innerHTML = visible.map(book => `
     <article class="book-card">
       <div class="cover" style="${coverStyle(book)}" role="img" aria-label="Обложка книги «${book.title}»">
-        <img class="cover-photo" src="https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false" alt="Обложка книги «${book.title}»" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
+        <img class="cover-photo" src="covers/book-${String(book.id).padStart(2,"0")}.jpg" alt="Обложка книги «${book.title}»" loading="lazy" onload="this.parentElement.classList.add('has-photo')" onerror="this.remove()">
         <span class="cover-label">Лист · избранное</span><span class="cover-art" data-symbol="${book.symbol}"></span>
         <span class="cover-title">${book.title}</span><span class="cover-author">${book.author}</span>
       </div>
