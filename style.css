@@ -67,3 +67,7 @@
   .book-price{font-size:11px}
   .add-button{font-size:9px}
 }
+@media(max-width:700px){
+  .topbar{position:sticky;top:0;z-index:20;background:var(--paper)}
+  main section[id]{scroll-margin-top:116px}
+}
